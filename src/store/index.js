@@ -6,10 +6,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    showsNew: [],
+    showsAdd:[],
 
   },
 
   getters: {
+
     },
 
 

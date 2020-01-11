@@ -20,6 +20,9 @@ app.use(bodyParser.json());
 
 //handles the get requests coming to the root url
 app.get('/', (req, res) => {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write(uc("Hello World!"));
+    res.end();
 
 });
 //handles the post requests sent to the server's shows url.
