@@ -1,12 +1,14 @@
 <template>
     <div class="shows">
         <h4>All shows is now ready</h4>
+<!--        {{show.name}}-->
     </div>
 </template>
 
 <script>
     export default {
-        name: "Shows"
+        name: "Shows",
+        props:['show']
     }
 </script>
 

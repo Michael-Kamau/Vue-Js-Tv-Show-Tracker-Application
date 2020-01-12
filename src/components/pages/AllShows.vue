@@ -1,7 +1,12 @@
 <template>
     <div class="shows">
         <h1>Welcome to the shows page</h1>
-        <shows/>
+
+        <div v-for="show in this.$store.getters.getAllShows" >
+            {{show.name}}
+            <shows v-bind:show="show"/>
+        </div>
+
     </div>
     
 </template>

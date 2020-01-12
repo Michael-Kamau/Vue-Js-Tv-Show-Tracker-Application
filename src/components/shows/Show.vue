@@ -1,6 +1,7 @@
 <template>
     <div class="show">
         <h4>Show</h4>
+        {{show.name}}
     </div>
     
 </template>
