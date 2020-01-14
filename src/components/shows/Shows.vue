@@ -17,11 +17,14 @@
 
 <style scoped>
     .shows{
-        background: #f0ebf0;
+        border-bottom: 6px solid #45a049;
+        background-color: #e1e1e1;
+        padding: 20px;
+        margin-bottom: 10px;
         border-radius: 10px;
-        padding:20px;
-        margin:10px;
         width: 480px;
+
+
     }
 
 </style>

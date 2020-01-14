@@ -5,19 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/AddShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AddShow.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/AllShows.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AllShows.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shows/AddShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AddShow.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shows/Show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shows/Show.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shows/Shows.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shows/Shows.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,14 +53,14 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/store" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/pages" />
       <recent name="$PROJECT_DIR$/src/components/buttons" />
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/store" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -99,7 +90,7 @@
       <workItem from="1578517062754" duration="595000" />
       <workItem from="1578612469861" duration="1645000" />
       <workItem from="1578737527034" duration="16731000" />
-      <workItem from="1578977280951" duration="21182000" />
+      <workItem from="1578977280951" duration="22997000" />
     </task>
     <servers />
   </component>
