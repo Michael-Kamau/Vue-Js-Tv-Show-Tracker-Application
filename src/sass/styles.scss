@@ -1,3 +1,18 @@
-h1{
-  color:blue;
+body {
+
+  ul {
+    li {
+      background-color: white;
+
+      a {
+        color:#b117ba;
+        .active{
+          background-color: white;
+
+      }
+      }
+    }
+
+  }
+
 }
