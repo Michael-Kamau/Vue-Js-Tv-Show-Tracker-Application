@@ -2,6 +2,7 @@
     <div class="show">
         <h4>Show</h4>
         {{show.name}}
+        <slot></slot>
     </div>
     
 </template>

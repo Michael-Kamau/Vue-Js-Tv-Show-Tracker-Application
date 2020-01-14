@@ -4,14 +4,15 @@
         <div v-for="show in this.$store.getters.getAllShows" >
             {{show.name}}
         </div>
-        {{this.$store.getters.getAllShows[0].name}}
+<!--        {{this.$store.getters.getAllShows[0].name}}-->
+
     </div>
 
 </template>
 
 <script>
     export default {
-        name: "index.vue"
+        name: "index.vue",
     }
 </script>
 

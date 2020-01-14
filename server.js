@@ -1,14 +1,29 @@
-const express = require('express');
-const jwt = require('jsonwebtoken');
+const express = require('express'),
+    jwt = require('jsonwebtoken'),
+    bodyParser = require('body-parser'),
+    cors = require('cors'),
+    path = require('path');
 
 const app = express();
-let shows = [{'name': 'android'}, {'name': 'android'}, {'name': 'android'}, {'name': 'android'}, {'name': 'android'}, {'name': 'android'}]
+let shows = [
+    {'id': 1, 'name': 'Michael', 'genre': 'Action','cast': 'Phillip, Henry Clarcson', 'rating': 1, 'year': 2020},
+    {'id': 2, 'name': 'Michael', 'genre': 'Action','cast': 'Phillip, Henry Clarcson', 'rating': 1, 'year': 2020},
+    {'id': 3, 'name': 'Michael', 'genre': 'Action','cast': 'Phillip, Henry Clarcson', 'rating': 1, 'year': 2020},
+    {'id': 4, 'name': 'Michael', 'genre': 'Action','cast': 'Phillip, Henry Clarcson', 'rating': 1, 'year': 2020},
+]
+
+
+app.use(cors());
+
+// Configuring body parser middleware
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 // Add headers
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+    res.setHeader('Access-Control-Allow-Origin', 'http://shows.appp');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -24,9 +39,16 @@ app.use(function (req, res, next) {
     next();
 });
 
+
 app.get('/api', (req, res) => {
     res.json({
         message: 'Welcome too the API'
+    });
+});
+
+app.post('/', (req, res) => {
+    res.json({
+        message: req.body
     });
 });
 
@@ -36,9 +58,17 @@ app.get('/shows', (req, res) => {
     });
 });
 
-app.get('/add', (req, res) => {
-    addition = {'nname':'celestine'}
-    shows.push(addition)
+app.get('/test', (req, res) => {
+    let length = shows.length
+    res.json({
+        length
+    });
+});
+
+app.post('/addShow', (req, res, next) => {
+    let myObj = { 'id': 5, 'name': req.body.name, 'genre': req.body.genre,'cast': req.body.cast, 'rating':parseInt(req.body.rating), 'year': parseInt(req.body.year) };
+    console.log(myObj);
+    shows.push(myObj);
     res.json({
         shows
     });
