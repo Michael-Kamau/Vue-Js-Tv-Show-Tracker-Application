@@ -6,10 +6,10 @@ const express = require('express'),
 
 const app = express();
 let shows = [
-    {'id': 1, 'name': 'Michael', 'genre': 'Action','cast': 'Phillip, Henry Clarcson', 'rating': 1, 'year': 2020},
-    {'id': 2, 'name': 'Michael', 'genre': 'Action','cast': 'Phillip, Henry Clarcson', 'rating': 1, 'year': 2020},
-    {'id': 3, 'name': 'Michael', 'genre': 'Action','cast': 'Phillip, Henry Clarcson', 'rating': 1, 'year': 2020},
-    {'id': 4, 'name': 'Michael', 'genre': 'Action','cast': 'Phillip, Henry Clarcson', 'rating': 1, 'year': 2020},
+    {'id': 1, 'name': 'Michael', 'genre': 'Action','cast': 'Phillip, Henry Clarcson', 'rating': 1, 'year': 2020,'image':'http://www.alexanderbar.me/images/Captain.gif'},
+    {'id': 2, 'name': 'Michael', 'genre': 'Action','cast': 'Phillip, Henry Clarcson', 'rating': 1, 'year': 2020,'image':'http://www.alexanderbar.me/images/Tinyworld-montage_09.jpg'},
+    {'id': 3, 'name': 'Michael', 'genre': 'Action','cast': 'Phillip, Henry Clarcson', 'rating': 1, 'year': 2020,'image':'http://www.alexanderbar.me/images/captain-images/superheroes/centurion-small.gif'},
+    {'id': 4, 'name': 'Michael', 'genre': 'Action','cast': 'Phillip, Henry Clarcson', 'rating': 1, 'year': 2020,'image':'http://www.alexanderbar.me/images/captain-images/superheroes/astro-man-small.gif'},
 ]
 
 
@@ -66,7 +66,7 @@ app.get('/test', (req, res) => {
 });
 
 app.post('/addShow', (req, res, next) => {
-    let myObj = { 'id': 5, 'name': req.body.name, 'genre': req.body.genre,'cast': req.body.cast, 'rating':parseInt(req.body.rating), 'year': parseInt(req.body.year) };
+    let myObj = { 'id': 5, 'name': req.body.name, 'genre': req.body.genre,'cast': req.body.cast, 'rating':parseInt(req.body.rating), 'year': parseInt(req.body.year), 'image':req.body.image };
     console.log(myObj);
     shows.push(myObj);
     res.json({

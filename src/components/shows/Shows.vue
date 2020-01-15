@@ -1,5 +1,6 @@
 <template>
     <div class="shows">
+        <img :src="show.image" alt=""/>
         <h4>{{show.name}} </h4>
         <h5>Cast by: <small>{{show.cast}}</small></h5>
         <h6>{{show.genre}}</h6>

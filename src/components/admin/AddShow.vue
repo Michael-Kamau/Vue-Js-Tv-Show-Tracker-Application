@@ -35,12 +35,22 @@
                         <input type="number" id="show_rating" name="show_rating"  v-model="form.rating">
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-25">
                         <label for="show_year">Show Year</label>
                     </div>
                     <div class="col-75">
                         <input type="number" id="show_year" name="show_year"  v-model="form.year">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="show_image">Cover Image Link</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="show_image" name="show_image"  v-model="form.image">
                     </div>
                 </div>
                 <div class="row">
@@ -50,22 +60,6 @@
 
         </div>
 
-        <form>
-            <div class="grid-container">
-                <div class="grid-x grid-padding-x">
-                    <div class="medium-6 cell">
-                        <label>Input Label
-                            <input type="text" placeholder=".medium-6.cell">
-                        </label>
-                    </div>
-                    <div class="medium-6 cell">
-                        <label>Input Label
-                            <input type="text" placeholder=".medium-6.cell">
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </form>
     </div>
 </template>
 
