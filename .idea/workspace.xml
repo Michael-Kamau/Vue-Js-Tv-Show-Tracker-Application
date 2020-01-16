@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b78deb3c-2a0b-46f1-a731-455bf570b8f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dist/1248f09aed2ae4febed2.hot-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/54c6f0cb231bbe56aa94.hot-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/595d9b56f4ffd28c7ee5.hot-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/80301a89d24105dbadad.hot-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/844068e04875d5039e87.hot-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/e81a9a4931911a18b44e.hot-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/f9ba1c50df69097ad99b.hot-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main.1248f09aed2ae4febed2.hot-update.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main.54c6f0cb231bbe56aa94.hot-update.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main.595d9b56f4ffd28c7ee5.hot-update.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main.80301a89d24105dbadad.hot-update.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main.844068e04875d5039e87.hot-update.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main.e81a9a4931911a18b44e.hot-update.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main.f9ba1c50df69097ad99b.hot-update.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/Admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/Admin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/AdminLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AdminLogin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shows/Shows.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shows/Shows.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +90,7 @@
       <workItem from="1578612469861" duration="1645000" />
       <workItem from="1578737527034" duration="16731000" />
       <workItem from="1578977280951" duration="31102000" />
-      <workItem from="1579117589268" duration="2143000" />
+      <workItem from="1579117589268" duration="6865000" />
     </task>
     <servers />
   </component>
@@ -134,10 +118,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.0.1280.800@0.0.1280.800" timestamp="1578838805505" />
-    <state x="319" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1578977282480">
+    <state x="319" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1579155868302">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="319" y="232" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1578977282480" />
+    <state x="319" y="234" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579155868302" />
     <state x="298" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578987997828">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

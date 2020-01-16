@@ -48,7 +48,7 @@ app.get('/api', (req, res) => {
 
 app.post('/', (req, res) => {
     res.json({
-        message: req.body
+        message: req
     });
 });
 
@@ -66,8 +66,13 @@ app.get('/test', (req, res) => {
 });
 
 app.post('/addShow', (req, res, next) => {
-    let myObj = { 'id': 5, 'name': req.body.name, 'genre': req.body.genre,'cast': req.body.cast, 'rating':parseInt(req.body.rating), 'year': parseInt(req.body.year), 'image':req.body.image };
-    console.log(myObj);
+   let id=1
+    if (shows.length>0){
+        id=shows[shows.length-1].id+1
+    }
+    let myObj = { 'id':id, 'name': req.body.name, 'genre': req.body.genre,'cast': req.body.cast, 'rating':parseInt(req.body.rating), 'year': parseInt(req.body.year), 'image':req.body.image };
+
+    console.log(id);
     shows.push(myObj);
     res.json({
         shows
@@ -87,6 +92,14 @@ app.post('/api/posts', verifyToken, (req, res) => {
     });
 
 
+});
+
+app.post('/delete', (req, res) => {
+    shows = shows.filter(function(el) { return el.id != req.body.id; });
+    console.log(req.body.id)
+    res.json({
+        shows
+    });
 });
 
 app.post('/api/login', (req, res) => {

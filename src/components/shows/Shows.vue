@@ -5,6 +5,7 @@
         <h5>Cast by: <small>{{show.cast}}</small></h5>
         <h6>{{show.genre}}</h6>
         <i>{{show.year}}</i>
+        <button type="button" class="alert button" v-on:click="deleteShow">Delete</button>
 
     </div>
 </template>
@@ -12,7 +13,13 @@
 <script>
     export default {
         name: "Shows",
-        props:['show']
+        props:['show'],
+        methods:{
+            deleteShow(){
+                this.$store.dispatch('deleteShow',this.show)
+            }
+        },
+
     }
 </script>
 

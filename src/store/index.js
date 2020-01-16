@@ -32,6 +32,10 @@ export default new Vuex.Store({
             console.log("reached");
             commit('postShow', payload)
         },
+        deleteShow({commit}, payload) {
+            console.log("delete reached action");
+            commit('deleteShow', payload)
+        },
     },
 
     mutations: {
@@ -59,6 +63,16 @@ export default new Vuex.Store({
                     //this.errors.push(e)
                 console.log(e)
                 })
+        },
+        deleteShow(state,payload) {
+            axios.post(`http://localhost:5000/delete`, payload)
+                .then(response => {
+                    console.log(response.data)
+                    this.state.show=response.data.shows
+                }).catch(e => {
+                //this.errors.push(e)
+                console.log(e)
+            })
         },
 
     }
