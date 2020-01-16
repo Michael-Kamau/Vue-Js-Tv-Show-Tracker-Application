@@ -6,8 +6,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        showsNew: [],
         show: [],
+        authenticationToken:null,
+        showsNew: [],
         showsAdd: [],
         cart: [],
         checkoutStatus: null,

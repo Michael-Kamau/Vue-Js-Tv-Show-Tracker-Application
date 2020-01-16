@@ -4,7 +4,8 @@
 
 <script>
     export default {
-        name: "admin.vue"
+        name: "admin.vue",
+
     }
 </script>
 

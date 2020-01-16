@@ -7,6 +7,7 @@ import AllShows from "../components/pages/AllShows.vue";
 import ErrorPage from "../components/pages/ErrorPage.vue";
 import About from "../components/pages/About.vue";
 import AddShow from "../components/admin/AddShow.vue";
+import AdminLogin from "../components/admin/AdminLogin.vue";
 
 Vue.use(Router)
 
@@ -32,6 +33,11 @@ export default new Router({
             path: '/addShow',
             name: 'addShow',
             component: AddShow,
+        },
+        {
+            path: '/admin',
+            name: 'admin',
+            component: AdminLogin,
         },
         {
             path: '*',

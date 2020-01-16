@@ -6,6 +6,7 @@
                 <li><a><router-link to="/about">About</router-link></a></li>
                 <li><a><router-link to="/shows">Shows</router-link></a></li>
                 <li><a><router-link to="/addShow">Add Show</router-link></a></li>
+                <li><a><router-link to="/admin">Admin</router-link></a></li>
 
             </ul>
         </div>
