@@ -8,6 +8,7 @@ export default new Vuex.Store({
     state: {
         show: [],
         authenticationToken:null,
+        authenticated:false,
         showsNew: [],
         showsAdd: [],
         cart: [],
@@ -39,12 +40,6 @@ export default new Vuex.Store({
     },
 
     mutations: {
-        pushShowToCart(state, productId) {
-            state.cart.push({
-                id: productId,
-                quantity: 1
-            })
-        },
 
         getShowsData(state) {
             axios.get('http://localhost:5000/shows')
@@ -66,6 +61,16 @@ export default new Vuex.Store({
         },
         deleteShow(state,payload) {
             axios.post(`http://localhost:5000/delete`, payload)
+                .then(response => {
+                    console.log(response.data)
+                    this.state.show=response.data.shows
+                }).catch(e => {
+                //this.errors.push(e)
+                console.log(e)
+            })
+        },
+        login(state, payload) {
+            axios.post(`http://localhost:5000/login`, payload)
                 .then(response => {
                     console.log(response.data)
                     this.state.show=response.data.shows

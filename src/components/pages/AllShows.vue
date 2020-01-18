@@ -15,7 +15,7 @@
     import Shows from "../shows/Shows.vue";
 
     export default {
-        name: "AllShows.vue",
+        name: "AllShows",
         components: {Shows},
     }
 </script>

@@ -4,7 +4,7 @@
             <ul class="menu">
                 <li class=""><a><router-link to="/">Home</router-link></a></li>
                 <li><a><router-link to="/about">About</router-link></a></li>
-                <li><a><router-link to="/shows">Shows</router-link></a></li>
+<!--                <li><a><router-link to="/shows">Shows</router-link></a></li>-->
                 <li><a><router-link to="/addShow">Add Show</router-link></a></li>
                 <li><a><router-link to="/admin">Admin</router-link></a></li>
 

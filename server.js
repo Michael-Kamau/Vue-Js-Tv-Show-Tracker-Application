@@ -2,15 +2,67 @@ const express = require('express'),
     jwt = require('jsonwebtoken'),
     bodyParser = require('body-parser'),
     cors = require('cors'),
-    path = require('path');
+    path = require('path'),
+    nodeMailer = require('nodemailer');
 
 const app = express();
+let transporter =nodeMailer.createTransport({
+    service:'gmail',
+    auth:{
+        user:'starevents254@gmail.com',
+        pass:'events254'
+    }
+})
+
+let mailOptions={
+    from:'starevents254@gmail.com',
+    to:'mkkamau@cytonn.com',
+    subject:'Welcome to Node',
+    text:'Node can be able to send emails'
+}
+
+
+
 let shows = [
-    {'id': 1, 'name': 'Michael', 'genre': 'Action','cast': 'Phillip, Henry Clarcson', 'rating': 1, 'year': 2020,'image':'http://www.alexanderbar.me/images/Captain.gif'},
-    {'id': 2, 'name': 'Michael', 'genre': 'Action','cast': 'Phillip, Henry Clarcson', 'rating': 1, 'year': 2020,'image':'http://www.alexanderbar.me/images/Tinyworld-montage_09.jpg'},
-    {'id': 3, 'name': 'Michael', 'genre': 'Action','cast': 'Phillip, Henry Clarcson', 'rating': 1, 'year': 2020,'image':'http://www.alexanderbar.me/images/captain-images/superheroes/centurion-small.gif'},
-    {'id': 4, 'name': 'Michael', 'genre': 'Action','cast': 'Phillip, Henry Clarcson', 'rating': 1, 'year': 2020,'image':'http://www.alexanderbar.me/images/captain-images/superheroes/astro-man-small.gif'},
+    {
+        'id': 1,
+        'name': 'Michael',
+        'genre': 'Action',
+        'cast': 'Phillip, Henry Clarcson',
+        'rating': 1,
+        'year': 2020,
+        'image': 'http://www.alexanderbar.me/images/Captain.gif'
+    },
+    {
+        'id': 2,
+        'name': 'Michael',
+        'genre': 'Action',
+        'cast': 'Phillip, Henry Clarcson',
+        'rating': 1,
+        'year': 2020,
+        'image': 'http://www.alexanderbar.me/images/Tinyworld-montage_09.jpg'
+    },
+    {
+        'id': 3,
+        'name': 'Michael',
+        'genre': 'Action',
+        'cast': 'Phillip, Henry Clarcson',
+        'rating': 1,
+        'year': 2020,
+        'image': 'http://www.alexanderbar.me/images/captain-images/superheroes/centurion-small.gif'
+    },
+    {
+        'id': 4,
+        'name': 'Michael',
+        'genre': 'Action',
+        'cast': 'Phillip, Henry Clarcson',
+        'rating': 1,
+        'year': 2020,
+        'image': 'http://www.alexanderbar.me/images/captain-images/superheroes/astro-man-small.gif'
+    },
 ]
+let users=[{'id':1,'name':"Michael",'email':'kamau.karitu@gmail.com'}]
+
 
 
 app.use(cors());
@@ -47,8 +99,15 @@ app.get('/api', (req, res) => {
 });
 
 app.post('/', (req, res) => {
+    transporter.sendMail(mailOptions, function(error, info){
+        if(error){
+            console.log(error)
+        }else{
+            console.log('Email sent'+info.response)
+        }
+    })
     res.json({
-        message: req
+        message: shows
     });
 });
 
@@ -66,11 +125,19 @@ app.get('/test', (req, res) => {
 });
 
 app.post('/addShow', (req, res, next) => {
-   let id=1
-    if (shows.length>0){
-        id=shows[shows.length-1].id+1
+    let id = 1
+    if (shows.length > 0) {
+        id = shows[shows.length - 1].id + 1
     }
-    let myObj = { 'id':id, 'name': req.body.name, 'genre': req.body.genre,'cast': req.body.cast, 'rating':parseInt(req.body.rating), 'year': parseInt(req.body.year), 'image':req.body.image };
+    let myObj = {
+        'id': id,
+        'name': req.body.name,
+        'genre': req.body.genre,
+        'cast': req.body.cast,
+        'rating': parseInt(req.body.rating),
+        'year': parseInt(req.body.year),
+        'image': req.body.image
+    };
 
     console.log(id);
     shows.push(myObj);
@@ -95,7 +162,9 @@ app.post('/api/posts', verifyToken, (req, res) => {
 });
 
 app.post('/delete', (req, res) => {
-    shows = shows.filter(function(el) { return el.id != req.body.id; });
+    shows = shows.filter(function (el) {
+        return el.id != req.body.id;
+    });
     console.log(req.body.id)
     res.json({
         shows

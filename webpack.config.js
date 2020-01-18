@@ -1,6 +1,6 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { VueLoaderPlugin } = require('vue-loader')
-const { HotModuleReplacementPlugin } = require('webpack')
+const {VueLoaderPlugin} = require('vue-loader')
+const {HotModuleReplacementPlugin} = require('webpack')
 // Webpack uses this to work with directories
 const path = require('path');
 
@@ -23,7 +23,7 @@ module.exports = {
 
             {
                 test: /\.vue$/,
-                loader:'vue-loader'
+                loader: 'vue-loader'
             },
 
             {
@@ -66,9 +66,13 @@ module.exports = {
                         }
                     }
                 ]
-            }
-
-
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    'file-loader',
+                ],
+            },
 
 
         ]

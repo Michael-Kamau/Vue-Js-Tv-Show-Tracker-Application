@@ -1,7 +1,7 @@
 <template>
     <div class="addShow">
-        <p class="header">Add New Show</p>
-        <div class="myForm">
+        <p class="header grid-x">Add New Show</p>
+        <div class="myForm small-12 medium-6">
             <form enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-25">
