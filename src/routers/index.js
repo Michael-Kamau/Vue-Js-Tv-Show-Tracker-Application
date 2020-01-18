@@ -8,6 +8,7 @@ import ErrorPage from "../components/pages/ErrorPage.vue";
 import About from "../components/pages/About.vue";
 import AddShow from "../components/admin/AddShow.vue";
 import AdminLogin from "../components/admin/AdminLogin.vue";
+import Logout from "../components/admin/Logout.vue";
 
 Vue.use(Router)
 
@@ -38,6 +39,11 @@ export default new Router({
             path: '/admin',
             name: 'admin',
             component: AdminLogin,
+        },
+        {
+            path: '/logout',
+            name: 'logout',
+            component: Logout,
         },
         {
             path: '*',

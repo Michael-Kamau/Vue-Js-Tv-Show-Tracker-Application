@@ -4,7 +4,7 @@
             <h1 class="medium-12  cell ">Welcome to   index page</h1>
             <div class="medium-8 cell search">
                 <label>
-                    <input type="text" placeholder="Search Movie" v-on:keyup="" v-model="search">
+                    <input type="text" placeholder="Search Movie by Name, Genre, Cast Year" v-on:keyup="" v-model="search">
                 </label>
             </div>
         </div>

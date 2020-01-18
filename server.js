@@ -6,21 +6,20 @@ const express = require('express'),
     nodeMailer = require('nodemailer');
 
 const app = express();
-let transporter =nodeMailer.createTransport({
-    service:'gmail',
-    auth:{
-        user:'starevents254@gmail.com',
-        pass:'events254'
+let transporter = nodeMailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'starevents254@gmail.com',
+        pass: 'events254'
     }
 })
 
-let mailOptions={
-    from:'starevents254@gmail.com',
-    to:'mkkamau@cytonn.com',
-    subject:'Welcome to Node',
-    text:'Node can be able to send emails'
+let mailOptions = {
+    from: 'starevents254@gmail.com',
+    to: 'mkkamau@cytonn.com',
+    subject: 'Welcome to Node',
+    text: 'Node can be able to send emails'
 }
-
 
 
 let shows = [
@@ -61,8 +60,7 @@ let shows = [
         'image': 'http://www.alexanderbar.me/images/captain-images/superheroes/astro-man-small.gif'
     },
 ]
-let users=[{'id':1,'name':"Michael",'email':'kamau.karitu@gmail.com'}]
-
+let users = [{'id': 1, 'name': "Michael", 'email': 'kamau.karitu@gmail.com'}]
 
 
 app.use(cors());
@@ -99,11 +97,11 @@ app.get('/api', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-    transporter.sendMail(mailOptions, function(error, info){
-        if(error){
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
             console.log(error)
-        }else{
-            console.log('Email sent'+info.response)
+        } else {
+            console.log('Email sent' + info.response)
         }
     })
     res.json({
@@ -173,16 +171,28 @@ app.post('/delete', (req, res) => {
 
 app.post('/api/login', (req, res) => {
     //mock user
+    console.log(req.body)
     const user = {
         id: 1,
         username: 'Michael',
         password: 'mysecret'
     }
-    jwt.sign({user: user}, 'mysecret', (err, token) => {
-        res.json({
-            token
+    if (req.body.username == "Michael" && req.body.password == "mysecret") {
+        console.log("correct")
+        jwt.sign({user: user}, 'mysecret', (err, token) => {
+            res.json({
+                token
+            });
         });
-    });
+    }else{
+        res.sendStatus(401);
+    }
+
+
+});
+app.post('/api/logout', (req, res) => {
+    //mock user
+    res.sendStatus(200);
 });
 
 //Where to verify the token

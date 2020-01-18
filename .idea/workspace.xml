@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b78deb3c-2a0b-46f1-a731-455bf570b8f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/images/movies.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/admin/Logout.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/AddShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AddShow.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/admin/AdminLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AdminLogin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/AllShows.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AllShows.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shows/Shows.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shows/Shows.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sass/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +96,7 @@
       <workItem from="1578737527034" duration="16731000" />
       <workItem from="1578977280951" duration="31102000" />
       <workItem from="1579117589268" duration="10532000" />
-      <workItem from="1579209680126" duration="16305000" />
+      <workItem from="1579209680126" duration="23016000" />
     </task>
     <servers />
   </component>

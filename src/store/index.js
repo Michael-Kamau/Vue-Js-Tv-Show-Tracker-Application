@@ -7,7 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         show: [],
-        authenticationToken:null,
+        token:localStorage.getItem('access_token')||null,
         authenticated:false,
         showsNew: [],
         showsAdd: [],
@@ -20,6 +20,10 @@ export default new Vuex.Store({
         getAllShows(state) {
             return state.show
         },
+
+        loggedIn(state){
+            return state.token!=null
+        }
 
 
     },
@@ -37,6 +41,50 @@ export default new Vuex.Store({
             console.log("delete reached action");
             commit('deleteShow', payload)
         },
+        retrieveToken(state,payload){
+            return new Promise((resolve,reject)=>{
+                axios.post(`http://localhost:5000/api/login`, payload)
+                    .then(response => {
+                        console.log(response.data)
+                        const token=response.data.token
+                        localStorage.setItem('access_token',token)
+                        state.commit('retrieveToken',token)
+                        resolve(response)
+                    }).catch(e => {
+                        reject(e)
+
+                    //this.errors.push(e)
+                    console.log(e)
+                })
+            })
+
+
+        },
+
+        loggedIn(state){
+            return state.token!=null
+        },
+        destroyToken(state){
+           if(state.getters.loggedIn){
+               return new Promise((resolve,reject)=>{
+                   axios.post(`http://localhost:5000/api/logout`)
+                       .then(response => {
+                           localStorage.removeItem('access_token')
+                           state.commit('destroyToken')
+                           resolve(response)
+                       }).catch(e => {
+                       localStorage.removeItem('access_token')
+                       state.commit('destroyToken')
+                       reject(e)
+
+                       //this.errors.push(e)
+                       console.log(e)
+                   })
+               })
+
+
+           }
+        }
     },
 
     mutations: {
@@ -68,6 +116,13 @@ export default new Vuex.Store({
                 //this.errors.push(e)
                 console.log(e)
             })
+        },
+
+        retrieveToken(state,payload){
+            state.token=payload
+        },
+        destroyToken(state){
+            state.token=null
         },
         login(state, payload) {
             axios.post(`http://localhost:5000/login`, payload)
