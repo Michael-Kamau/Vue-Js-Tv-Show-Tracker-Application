@@ -7,11 +7,13 @@
   /*background-position: 50% 50%;*/
   min-height: 90%;
   width: 100%;
-  padding: 70px 20px 40px 20px;
+  padding: 70px 20px 10px 20px;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.5)), url(http://www.alexanderbar.me/images/Tinyworld-montage_09.jpg);
   background-size: cover;
   color: #f1f1f1;
-  line-height: 0.8;
+  line-height: 1.8;
+  border-radius: 15px;
+  margin: 2px;
 }
 
 /*.shows {*/
@@ -28,9 +30,27 @@
 /*    }*/
 /*}*/
 
+.subscribe[data-v-114c3182] {
+  background: #0a0a0a;
+  min-height: 300px;
+  padding: 100px 50px 100px 50px;
+  color: #cacaca;
+  line-height: 2.8;
+  border-top: 1px solid #e1e1e1;
+}
 .header .search[data-v-160ae547] {
   margin: auto;
 }
+.movies[data-v-160ae547] {
+  min-height: 90%;
+  background: #0a0a0a;
+}
+
+/*.subscribe {*/
+/*    background: #0a0a0a;*/
+/*    min-height: 300px;*/
+/*    padding: 50px;*/
+/*}*/
 .myForm[data-v-44510d7e] {
   width: 40%;
 }
@@ -96,11 +116,19 @@ input[type=button][data-v-44510d7e]:hover {
 .login[data-v-0b05af4a] {
   margin: auto;
 }
+body ul {
+  background-color: #000000;
+}
 body ul li {
-  background-color: white;
+  background-color: #000000;
 }
 body ul li a {
-  color: #111144;
+  color: #ffffff;
+  background: -webkit-linear-gradient(#fda033, #b0487f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 25px;
+  font-weight: 300;
 }
 body ul li a .active {
   background-color: white;
@@ -113,4 +141,14 @@ body .header {
   background-size: cover;
   color: #f1f1f1;
   line-height: 0.8;
+}
+body .header h2 {
+  margin: auto;
+  background: -webkit-linear-gradient(#fda033, #b0487f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 25px;
+  font-weight: 300;
+  font-size: 45px;
+  font-weight: lighter;
 }

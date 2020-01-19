@@ -1,30 +1,57 @@
 <template>
-    <div class="shows" :style="cssVars">
-<!--        <img :src="show.image" alt=""/>-->
-        <h4>{{show.name}} </h4>
-        <h5>Cast by: <small>{{show.cast}}</small></h5>
-        <h6>{{show.genre}}</h6>
-        <i>{{show.year}}</i>
-        <button type="button" class="alert button" v-on:click="deleteShow">Delete</button>
+    <div class="shows grid-y" :style="cssVars">
+        <!--        <img :src="show.image" alt=""/>-->
+        <h4>Movie:&nbsp;{{show.name}} </h4>
+        <h6>Cast by:&nbsp;<small>{{show.cast}}</small></h6>
+        <h6>Genre:&nbsp; {{show.genre}}</h6>
+        <h6>Year:&nbsp;{{show.year}}</h6>
+        <h6>Rating:&nbsp;<i class="fas fa-star"></i></h6>
+        <button type="button" class=" button" v-bind:class="{ success: watch }" v-on:click="toggleWatch">Watch Trailer &nbsp;<i
+                class="fas fa-film"></i></button>
+        <button type="button" class="alert button" v-on:click="deleteShow" v-if="this.$store.getters.loggedIn">Delete <i
+                class="fas fa-trash-alt"></i></button>
+        <div v-if="watch">
+            <Show v-bind:url="videoUrl"></Show>
+
+        </div>
 
     </div>
 </template>
 
 <script>
+    import Show from "./Show.vue";
+
     export default {
         name: "Shows",
         props: ['show'],
+        components: {Show},
+        data() {
+            return {
+                watch: false
+            }
+        },
         methods: {
             deleteShow() {
                 this.$store.dispatch('deleteShow', this.show)
             },
+            toggleWatch() {
+                this.watch = !this.watch
+            }
+
         },
         computed: {
             cssVars() {
                 return {
-                    'background-image':  this.show.image,
+                    'background-image': this.show.image,
                 }
+            },
+            videoUrl() {
+                let url = this.show.video.replace("watch?v=", "embed/")
+                return url+'?autoplay=1' //to mute, also append '&mute=1'
+
+
             }
+
         }
 
     }
@@ -45,9 +72,8 @@
 
         min-height: 90%;
         width: 100%;
-        padding:70px 20px 40px 20px;
-        background:
-                /* top, transparent red */
+        padding: 70px 20px 10px 20px;
+        background: /* top, transparent red */
                 linear-gradient(to right,
                         rgba(0, 0, 0, 0.95),
                         rgba(0, 0, 0, 0.5)
@@ -56,7 +82,9 @@
                 url(http://www.alexanderbar.me/images/Tinyworld-montage_09.jpg);
         background-size: cover;
         color: #f1f1f1;
-        line-height: 0.8;
+        line-height: 1.8;
+        border-radius: 15px;
+        margin: 2px;
 
     }
 

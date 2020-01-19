@@ -84,6 +84,16 @@ export default new Vuex.Store({
 
 
            }
+        },
+        subscribe(state,payload){
+            axios.post(`http://localhost:5000/subscribe`, payload)
+                .then(response => {
+                    console.log(response.data)
+                    //this.state.show=response.data.shows
+                }).catch(e => {
+                //this.errors.push(e)
+                console.log(e)
+            })
         }
     },
 

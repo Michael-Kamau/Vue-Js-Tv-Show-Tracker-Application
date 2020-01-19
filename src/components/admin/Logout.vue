@@ -8,7 +8,7 @@
         created() {
             this.$store.dispatch('destroyToken')
                 .then(response =>{
-                    this.$router.push('/admin')
+                    this.$router.push('/')
                 })
         }
 

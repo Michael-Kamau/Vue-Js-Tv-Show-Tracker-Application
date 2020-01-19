@@ -1,12 +1,22 @@
-$mainColor: #111144;
+$mainColor: #ffffff;
+@mixin myTextGradient{
+  background: -webkit-linear-gradient(#fda033, #b0487f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 25px;
+  font-weight: 300;
+}
+
 body {
 
   ul {
+    background-color: #000000;
     li {
-      background-color: white;
+      background-color: #000000;
 
       a {
         color:$mainColor;
+        @include myTextGradient;
         .active{
           background-color: white;
 
@@ -32,6 +42,13 @@ body {
     background-size: cover;
     color: #f1f1f1;
     line-height: 0.8;
+
+    h2{
+      margin:auto;
+      @include myTextGradient;
+      font-size: 45px;
+      font-weight: lighter;
+    }
   }
 
 }

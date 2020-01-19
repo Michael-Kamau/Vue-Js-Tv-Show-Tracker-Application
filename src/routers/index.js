@@ -3,12 +3,12 @@ import Vue from 'vue'
 
 
 import Index from "../components/pages/Index.vue";
-import AllShows from "../components/pages/AllShows.vue";
 import ErrorPage from "../components/pages/ErrorPage.vue";
 import About from "../components/pages/About.vue";
 import AddShow from "../components/admin/AddShow.vue";
 import AdminLogin from "../components/admin/AdminLogin.vue";
 import Logout from "../components/admin/Logout.vue";
+import Show from "../components/shows/Show.vue";
 
 Vue.use(Router)
 
@@ -26,9 +26,9 @@ export default new Router({
             component: About
         },
         {
-            path: '/shows',
-            name: 'shows',
-            component: AllShows,
+            path: '/show',
+            name: 'show',
+            component: Show,
         },
         {
             path: '/addShow',

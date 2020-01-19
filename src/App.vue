@@ -2,9 +2,9 @@
     <div class="app">
         <div class="navbar">
             <ul class="menu">
-                <li class=""><a><router-link to="/">Home</router-link></a></li>
+                <li class=""><a><router-link to="/">StarShows</router-link></a></li>
 <!--                <li><a><router-link to="/about">About</router-link></a></li>-->
-<!--                <li><a><router-link to="/shows">Shows</router-link></a></li>-->
+<!--                <li><a><router-link to="/show">Show</router-link></a></li>-->
                 <li v-if="loggedIn"><a><router-link to="/addShow">Add Show</router-link></a></li>
                 <li v-if="!loggedIn"><a><router-link to="/admin">Login</router-link></a></li>
                 <li v-if="loggedIn"><a><router-link to="/logout">Logout</router-link></a></li>

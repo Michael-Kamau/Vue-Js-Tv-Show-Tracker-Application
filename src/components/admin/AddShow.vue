@@ -54,6 +54,14 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-25">
+                        <label for="show_link">Videos Link</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="show_link" name="show_link"  v-model="form.video">
+                    </div>
+                </div>
+                <div class="row">
                     <input type="button" value="Add Show" @click="postShow">
                 </div>
             </form>

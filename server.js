@@ -30,7 +30,8 @@ let shows = [
         'cast': 'Phillip, Henry Clarcson',
         'rating': 1,
         'year': 2020,
-        'image': 'http://www.alexanderbar.me/images/Captain.gif'
+        'image': 'http://www.alexanderbar.me/images/Captain.gif',
+        'video': 'https://www.youtube.com/watch?v=Pre5W_0VYlk'
     },
     {
         'id': 2,
@@ -39,7 +40,8 @@ let shows = [
         'cast': 'Phillip, Henry Clarcson',
         'rating': 1,
         'year': 2020,
-        'image': 'http://www.alexanderbar.me/images/Tinyworld-montage_09.jpg'
+        'image': 'http://www.alexanderbar.me/images/Tinyworld-montage_09.jpg',
+        'video': 'https://www.youtube.com/watch?v=Pre5W_0VYlk'
     },
     {
         'id': 3,
@@ -48,7 +50,8 @@ let shows = [
         'cast': 'Phillip, Henry Clarcson',
         'rating': 1,
         'year': 2020,
-        'image': 'http://www.alexanderbar.me/images/captain-images/superheroes/centurion-small.gif'
+        'image': 'http://www.alexanderbar.me/images/captain-images/superheroes/centurion-small.gif',
+        'video': 'https://www.youtube.com/watch?v=Pre5W_0VYlk'
     },
     {
         'id': 4,
@@ -57,10 +60,11 @@ let shows = [
         'cast': 'Phillip, Henry Clarcson',
         'rating': 1,
         'year': 2020,
-        'image': 'http://www.alexanderbar.me/images/captain-images/superheroes/astro-man-small.gif'
+        'image': 'http://www.alexanderbar.me/images/captain-images/superheroes/astro-man-small.gif',
+        'video': 'https://www.youtube.com/watch?v=Pre5W_0VYlk'
     },
 ]
-let users = [{'id': 1, 'name': "Michael", 'email': 'kamau.karitu@gmail.com'}]
+let subscribers = [{'id': 1, 'email': 'kamau.karitu@gmail.com', 'verString': "Michael"}]
 
 
 app.use(cors());
@@ -134,8 +138,16 @@ app.post('/addShow', (req, res, next) => {
         'cast': req.body.cast,
         'rating': parseInt(req.body.rating),
         'year': parseInt(req.body.year),
-        'image': req.body.image
+        'image': req.body.image,
+        'video': req.body.video
     };
+
+    for(i=0; i<subscribers.length;i++){
+        sendMail(subscribers[i].email, "New Movie Added", "The movie added is " + myObj.name + " To unsubscribe, follow the link http://localhost:5000/unsubscribe?id=" + myObj.id + "&&verToken=" + myObj.verString)
+    }
+
+
+
 
     console.log(id);
     shows.push(myObj);
@@ -184,15 +196,31 @@ app.post('/api/login', (req, res) => {
                 token
             });
         });
-    }else{
+    } else {
         res.sendStatus(401);
     }
 
 
 });
 app.post('/api/logout', (req, res) => {
-    //mock user
+
     res.sendStatus(200);
+});
+
+app.post('/subscribe', (req, res) => {
+    console.log(req.body);
+    let id = 1
+    if (subscribers.length > 0) {
+        id = subscribers[subscribers.length - 1].id + 1
+    }
+    let myObj = {
+        'id': id,
+        'email': req.body.email,
+        'verString': makeVerString(10)
+    };
+    console.log(myObj);
+    subscribers.push(myObj);
+    sendMail(myObj.email, "Welcome to the StarShows subscription list", "To unsubscribe, follow the link http://localhost:5000/unsubscribe?id=" + myObj.id + "&&verToken=" + myObj.verString)
 });
 
 //Where to verify the token
@@ -213,6 +241,47 @@ function verifyToken(req, res, next) {
     } else {
         res.sendStatus(403);
     }
+}
+
+
+///Function for generating verification string to manage subscribers
+
+function makeVerString(length) {
+    var result = '';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+
+//function to send an email to the subscribers
+function sendMail(recipient, subject, text) {
+
+
+    let mailOptions = {
+        from: 'starevents254@gmail.com',
+        to: recipient,
+        subject: subject,
+        text: text
+    }
+
+
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log(error)
+        } else {
+            console.log('Email sent' + info.response)
+        }
+    })
+
+}
+
+
+//send Mail to user to confirm subscription
+function confirmSubscriptionEmail() {
+
 }
 
 // eslint-disable-next-line no-console
