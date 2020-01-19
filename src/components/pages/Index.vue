@@ -15,7 +15,7 @@
 
         <div class="movies medium-12 small-12 large-12 grid-x">
             <div v-for="show in this.$store.getters.getAllShows" class="medium-4 small-12 cell"
-                 v-if="show.name.toUpperCase().includes(search.toUpperCase()) || show.year.toString().includes(search.toUpperCase()) || show.genre.toUpperCase().includes(search.toUpperCase())">
+                 v-if="searchString(show.name).includes(searchString(search)) || show.year.toString().includes(search.toUpperCase()) || show.cast.toUpperCase().includes(search.toUpperCase()) || show.genre.toUpperCase().includes(search.toUpperCase())">
                 <!--            {{show.name}}-->
                 <div>
                     <shows v-bind:show="show">Show</shows>
@@ -50,7 +50,13 @@
             }
         },
 
-        methods: {},
+        methods:{
+            searchString( str){
+                return str.toUpperCase();
+            }
+        },
+
+
 
 
     }

@@ -89,8 +89,14 @@
 </script>
 
 <style scoped>
+    .addShow{
+        background: black;
+        text-align: center;
+        color: white;
+    }
     .myForm{
         width:40%;
+
     }
 
     * {

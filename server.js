@@ -25,43 +25,64 @@ let mailOptions = {
 let shows = [
     {
         'id': 1,
-        'name': 'Michael',
-        'genre': 'Action',
+        'name': 'Morbius',
+        'genre': 'Action, Thriller',
         'cast': 'Phillip, Henry Clarcson',
         'rating': 1,
         'year': 2020,
         'image': 'http://www.alexanderbar.me/images/Captain.gif',
-        'video': 'https://www.youtube.com/watch?v=Pre5W_0VYlk'
+        'video': 'https://www.youtube.com/watch?v=R29CZvGVH4I'
     },
     {
         'id': 2,
-        'name': 'Michael',
-        'genre': 'Action',
-        'cast': 'Phillip, Henry Clarcson',
+        'name': 'Love Aaj Kal',
+        'genre': 'Romance, Comedy',
+        'cast': 'Patel, Cynthia morgan',
         'rating': 1,
-        'year': 2020,
-        'image': 'http://www.alexanderbar.me/images/Tinyworld-montage_09.jpg',
-        'video': 'https://www.youtube.com/watch?v=Pre5W_0VYlk'
+        'year': 2015,
+        'image': 'http://www.ragranjani.com/images/slider-002.jpg',
+        'video': 'https://www.youtube.com/watch?v=4QvqHwH_je8'
     },
     {
         'id': 3,
-        'name': 'Michael',
-        'genre': 'Action',
-        'cast': 'Phillip, Henry Clarcson',
+        'name': 'Trapped Model',
+        'genre': 'Romance, Comedy',
+        'cast': 'Winsley, Barbaric Heathen',
         'rating': 1,
-        'year': 2020,
+        'year': 2011,
         'image': 'http://www.alexanderbar.me/images/captain-images/superheroes/centurion-small.gif',
-        'video': 'https://www.youtube.com/watch?v=Pre5W_0VYlk'
+        'video': 'https://www.youtube.com/watch?v=RuUSTEePjY4'
     },
     {
         'id': 4,
-        'name': 'Michael',
+        'name': 'Michael Reborn',
         'genre': 'Action',
         'cast': 'Phillip, Henry Clarcson',
         'rating': 1,
-        'year': 2020,
+        'year': 2017,
         'image': 'http://www.alexanderbar.me/images/captain-images/superheroes/astro-man-small.gif',
         'video': 'https://www.youtube.com/watch?v=Pre5W_0VYlk'
+    },
+    {
+        'id': 5,
+        'name': 'Lucifer',
+        'genre': 'Action,Comedy, Thriller',
+        'cast': 'Lucifer, Jaden',
+        'rating': 1,
+        'year': 2018,
+        'image': 'http://www.ragranjani.com/images/screencapture-file-E-00_AVIJIT-00_CLIENTS-RAGRANJANI-ragweb-ragranjani-com-public_html-index-html-1520434866571.png',
+        'video': 'https://www.youtube.com/watch?v=X4bF_quwNtw'
+    },
+
+    {
+        'id': 6,
+        'name': 'Hustlers',
+        'genre': 'Action,Comedy, Thriller',
+        'cast': 'Cardi B, Nicki Minaj',
+        'rating': 1,
+        'year': 2019,
+        'image': 'https://www.readdork.com/images/article/Artist-Images/C/Cardi-B/_crop1500x1000/Cardi-B-Jorda-Frantzis-Press-Image-3.jpg',
+        'video': 'https://www.youtube.com/watch?v=LUG2U-IxPx0'
     },
 ]
 let subscribers = [{'id': 1, 'email': 'kamau.karitu@gmail.com', 'verString': "Michael"}]

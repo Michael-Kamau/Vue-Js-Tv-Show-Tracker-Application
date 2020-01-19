@@ -1,3 +1,11 @@
+.shows-container[data-v-0efe165d] {
+  background: black;
+  color: #f1f1f1;
+  line-height: 1.8;
+  border-radius: 15px;
+  margin: 2px;
+  background-size: cover;
+}
 .shows[data-v-0efe165d] {
   /*width: 150px;*/
   /*!*height: 100px;*!*/
@@ -8,12 +16,9 @@
   min-height: 90%;
   width: 100%;
   padding: 70px 20px 10px 20px;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.5)), url(http://www.alexanderbar.me/images/Tinyworld-montage_09.jpg);
-  background-size: cover;
-  color: #f1f1f1;
-  line-height: 1.8;
-  border-radius: 15px;
-  margin: 2px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.5));
+  /* bottom, image */
+  /*url(http://www.alexanderbar.me/images/Tinyworld-montage_09.jpg);*/
 }
 
 /*.shows {*/
@@ -51,6 +56,11 @@
 /*    min-height: 300px;*/
 /*    padding: 50px;*/
 /*}*/
+.addShow[data-v-44510d7e] {
+  background: black;
+  text-align: center;
+  color: white;
+}
 .myForm[data-v-44510d7e] {
   width: 40%;
 }
@@ -115,6 +125,13 @@ input[type=button][data-v-44510d7e]:hover {
 }
 .login[data-v-0b05af4a] {
   margin: auto;
+  background: #0a0a0a;
+  min-height: 500px;
+  padding: 100px 0px 0px 0px;
+  text-align: center;
+}
+.login h1[data-v-0b05af4a] {
+  color: white;
 }
 body ul {
   background-color: #000000;

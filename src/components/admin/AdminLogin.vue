@@ -1,5 +1,6 @@
 <template>
     <div class="login">
+        <h1>Admin login</h1>
         <form action="#" @submit.prevent="login">
             <div class="grid-x grid-padding-x">
                 <div class=" login medium-6 small-12">
@@ -45,9 +46,16 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .login {
         margin: auto;
+        background: #0a0a0a;
+        min-height: 500px;
+        padding :100px 0px 0px 0px;
+        text-align: center;
+        h1{
+            color: white;
+        }
 
     }
 
