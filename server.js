@@ -142,8 +142,8 @@ app.post('/addShow', (req, res, next) => {
         'video': req.body.video
     };
 
-    for(i=0; i<subscribers.length;i++){
-        sendMail(subscribers[i].email, "New Movie Added", "The movie added is " + myObj.name + " To unsubscribe, follow the link http://localhost:5000/unsubscribe?id=" + myObj.id + "&&verToken=" + myObj.verString)
+    for(let i=0; i<subscribers.length;i++){
+        sendMail(subscribers[i].email, "New Movie Added", "The movie added is " + myObj.name + " To unsubscribe, follow the link http://localhost:5000/unsubscribe?id=" + myObj.id + "&verString=" + myObj.verString)
     }
 
 
@@ -220,7 +220,46 @@ app.post('/subscribe', (req, res) => {
     };
     console.log(myObj);
     subscribers.push(myObj);
-    sendMail(myObj.email, "Welcome to the StarShows subscription list", "To unsubscribe, follow the link http://localhost:5000/unsubscribe?id=" + myObj.id + "&&verToken=" + myObj.verString)
+    sendMail(myObj.email, "Welcome to the StarShows subscription list", "To unsubscribe, follow the link http://localhost:5000/unsubscribe?id=" + myObj.id + "&verString=" + myObj.verString)
+});
+
+app.get('/unsubscribe',(req,res)=>{
+
+
+    try {
+        console.log("To unsubscribe"+req.query['id'])
+
+        for (let i=0; i<subscribers.length;i++) {
+            if(subscribers[i].id==req.query['id'] && subscribers[i].verString==req.query.verString){
+                subscribers = subscribers.filter(function (el) {
+                    return el.id != req.query['id'];
+                });
+
+            }
+        }
+
+    }
+    catch (e) {
+        console.log("entering catch block");
+        console.log(e);
+        console.log("leaving catch block");
+    }
+    finally {
+        console.log('finally')
+        // res.writeHead(301,
+        //     {Location: 'http://shows.app'}
+        // );
+        // res.end();
+        res.redirect(301,'http://shows.appp');
+    }
+
+
+
+
+
+
+
+    console.log(subscribers)
 });
 
 //Where to verify the token
