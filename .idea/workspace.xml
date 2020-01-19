@@ -8,8 +8,10 @@
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/admin/AddShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AddShow.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/admin/AdminLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AdminLogin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shows/Shows.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shows/Shows.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/Users.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/subscribers/Subscribers.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/login.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sass/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +97,7 @@
       <workItem from="1578737527034" duration="16731000" />
       <workItem from="1578977280951" duration="31102000" />
       <workItem from="1579117589268" duration="10532000" />
-      <workItem from="1579209680126" duration="51760000" />
+      <workItem from="1579209680126" duration="57773000" />
     </task>
     <servers />
   </component>
@@ -131,9 +133,9 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="298" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1578987997828" />
-    <state x="464" y="142" width="816" height="540" key="find.popup" timestamp="1579418274982">
+    <state x="464" y="142" width="816" height="540" key="find.popup" timestamp="1579462369281">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="464" y="142" width="816" height="540" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1579418274982" />
+    <state x="464" y="142" width="816" height="540" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1579462369281" />
   </component>
 </project>

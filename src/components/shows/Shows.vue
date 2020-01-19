@@ -38,7 +38,12 @@
         },
         methods: {
             deleteShow() {
-                this.$store.dispatch('deleteShow', this.show)
+
+                if(confirm("Do you really want to delete "+this.show.name+" ?")){
+
+                    this.$store.dispatch('deleteShow', this.show)
+                }
+
             },
             toggleWatch() {
                 this.watch = !this.watch

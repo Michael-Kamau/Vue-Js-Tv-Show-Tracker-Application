@@ -1,26 +1,31 @@
 <template>
-    <div class="login">
-        <h1>Admin login</h1>
-        <form action="#" @submit.prevent="login">
-            <div class="grid-x grid-padding-x">
-                <div class=" login medium-6 small-12">
-                    <div class="medium-12 cell">
-                        <label>Username
-                            <input type="text" placeholder="username" v-model="form.username">
-                        </label>
-                    </div>
-                    <div class="medium-12 cell">
-                        <label>Password
-                            <input type="text" placeholder="password" v-model="form.password">
-                        </label>
+    <div class="login-container">
+        <div class="header text-center">
+            <h2>Admin Login</h2>
+        </div>
+        <div class="login">
+            <form action="#" @submit.prevent="login">
+                <div class="grid-x grid-padding-x">
+                    <div class=" login medium-6 small-12">
+                        <div class="medium-12 cell">
+                            <label>Username
+                                <input type="text" placeholder="username" v-model="form.username">
+                            </label>
+                        </div>
+                        <div class="medium-12 cell">
+                            <label>Password
+                                <input type="password" placeholder="password" v-model="form.password">
+                            </label>
 
-                    </div>
-                    <div class="medium-12 cell">
-                        <button type="submit" class="success button" @click:login>Login</button>
+                        </div>
+                        <div class="medium-12 cell">
+                            <button type="submit" class="success button" @click:login>Login</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
+
     </div>
 </template>
 
@@ -51,11 +56,20 @@
         margin: auto;
         background: #0a0a0a;
         min-height: 500px;
-        padding :100px 0px 0px 0px;
+        padding : 40px 0px 0px 0px;
         text-align: center;
         h1{
             color: white;
         }
+
+        button{
+            background-image: linear-gradient(to right, #fda033,#b0487f);
+            color:white;
+            :hover{
+                background-image: linear-gradient(to right,#b0487f, #fda033);
+            }
+        }
+
 
     }
 

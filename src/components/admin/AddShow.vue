@@ -1,7 +1,14 @@
 <template>
-    <div class="addShow">
-        <p class="header grid-x">Add New Show</p>
-        <div class="myForm small-12 medium-6">
+    <div class="addShow grid-x">
+        <div class="header">
+            <h2>Admin Panel Page</h2>
+        </div>
+
+        <div class="mySection small-12 medium-6">
+           <h4>Add New Show</h4>
+            <p v-if="error">
+                Please Ensure all the fields are filled correctly:
+            </p>
             <form enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-25">
@@ -66,38 +73,73 @@
                 </div>
             </form>
 
+
+        </div>
+        <div class="mySection small-12 medium-6 ">
+            <h4>Users</h4>
+            <div class="subscribers">
+                <Subscribers/>
+                <Subscribers/>
+                <Subscribers/>
+                <Subscribers/>
+                <Subscribers/>
+                <Subscribers/>
+            </div>
+
         </div>
 
     </div>
 </template>
 
 <script>
+    import Subscribers from "../subscribers/Subscribers.vue";
     export default {
         name: "AddShow.vue",
+        components:{Subscribers},
         data(){
             return{
                 form:{},
+                error:false
             }
         },
         methods:{
             postShow(){
-                this.$store.dispatch('postShow', this.form);
-                this.form={}
+                this.error=false
+                if(this.form.name && this.form.cast && this.form.genre && this.form.rating && this.form.year && this.form.image && this.form.video){
+                    this.$store.dispatch('postShow', this.form);
+                    this.form={}
+                }else{
+                    this.error=true
+                }
+
             },
         }
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .addShow{
-        background: black;
+        background: #fbfbfb;
         text-align: center;
-        color: white;
+        color: #000000;
     }
-    .myForm{
-        width:40%;
 
+    .mySection{
+        padding: 15px;
+        form{
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .subscribers{
+            overflow:scroll;
+            height:480px;
+        }
     }
+
+
+
+
 
     * {
         box-sizing: border-box;
@@ -117,17 +159,19 @@
     }
 
     input[type=button] {
-        background-color: #4CAF50;
+        /*background-color: #4CAF50;*/
         color: white;
         padding: 12px 20px;
         border: none;
         border-radius: 4px;
         cursor: pointer;
         float: right;
+        background-image: linear-gradient(to right, #fda033,#b0487f);
     }
 
     input[type=button]:hover {
-        background-color: #45a049;
+        /*background-color: #45a049;*/
+        background-image: linear-gradient(to right,#b0487f, #fda033);
     }
 
     .container {

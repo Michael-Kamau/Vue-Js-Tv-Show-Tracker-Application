@@ -25,20 +25,21 @@ let mailOptions = {
 let shows = [
     {
         'id': 1,
-        'name': 'Morbius',
-        'genre': 'Action, Thriller',
-        'cast': 'Phillip, Henry Clarcson',
-        'rating': 1,
-        'year': 2020,
-        'image': 'http://www.alexanderbar.me/images/Captain.gif',
-        'video': 'https://www.youtube.com/watch?v=R29CZvGVH4I'
+        'name': 'Divergent',
+        'genre': 'Action, Thriller, Intelligence',
+        'cast': 'Brian Venon,Karma Havik',
+        'rating': 5,
+        'year': 2019,
+        'image': 'http://9092.ultratv100.com:9090/movies/Batch219/Divergent%20%282014%29/Divergent%20%282014%29.jpg',
+        'video': 'https://www.youtube.com/watch?v=sutgWjz10sM'
     },
+
     {
         'id': 2,
         'name': 'Love Aaj Kal',
         'genre': 'Romance, Comedy',
         'cast': 'Patel, Cynthia morgan',
-        'rating': 1,
+        'rating': 2,
         'year': 2015,
         'image': 'http://www.ragranjani.com/images/slider-002.jpg',
         'video': 'https://www.youtube.com/watch?v=4QvqHwH_je8'
@@ -48,9 +49,9 @@ let shows = [
         'name': 'Trapped Model',
         'genre': 'Romance, Comedy',
         'cast': 'Winsley, Barbaric Heathen',
-        'rating': 1,
+        'rating': 6,
         'year': 2011,
-        'image': 'http://www.alexanderbar.me/images/captain-images/superheroes/centurion-small.gif',
+        'image': 'http://boudoirsalon.com/images/models/3480997_8353371.jpg',
         'video': 'https://www.youtube.com/watch?v=RuUSTEePjY4'
     },
     {
@@ -68,7 +69,7 @@ let shows = [
         'name': 'Lucifer',
         'genre': 'Action,Comedy, Thriller',
         'cast': 'Lucifer, Jaden',
-        'rating': 1,
+        'rating': 2,
         'year': 2018,
         'image': 'http://www.ragranjani.com/images/screencapture-file-E-00_AVIJIT-00_CLIENTS-RAGRANJANI-ragweb-ragranjani-com-public_html-index-html-1520434866571.png',
         'video': 'https://www.youtube.com/watch?v=X4bF_quwNtw'
@@ -84,6 +85,28 @@ let shows = [
         'image': 'https://www.readdork.com/images/article/Artist-Images/C/Cardi-B/_crop1500x1000/Cardi-B-Jorda-Frantzis-Press-Image-3.jpg',
         'video': 'https://www.youtube.com/watch?v=LUG2U-IxPx0'
     },
+    {
+        'id': 7,
+        'name': 'Morbius',
+        'genre': 'Action, Thriller',
+        'cast': 'Phillip, Henry Clarcson',
+        'rating': 3,
+        'year': 2020,
+        'image': 'http://www.alexanderbar.me/images/Captain.gif',
+        'video': 'https://www.youtube.com/watch?v=R29CZvGVH4I'
+    },
+    {
+        'id': 8,
+        'name': 'Star Girl',
+        'genre': 'Romance, Action, Family',
+        'cast': 'Helen Richer, Mitchel Jones',
+        'rating': 4,
+        'year': 2018,
+        'image': 'http://9092.ultratv100.com:9090/movies/Batch219/Kite%20%282014%29/Kite%20%282014%29.jpg',
+        'video': 'https://www.youtube.com/watch?v=br-CdxgxAvY'
+    },
+
+
 ]
 let subscribers = [{'id': 1, 'email': 'kamau.karitu@gmail.com', 'verString': "Michael"}]
 

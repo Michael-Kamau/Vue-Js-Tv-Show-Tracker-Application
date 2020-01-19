@@ -56,13 +56,25 @@
 /*    min-height: 300px;*/
 /*    padding: 50px;*/
 /*}*/
-.addShow[data-v-44510d7e] {
-  background: black;
-  text-align: center;
-  color: white;
+.subscriber-container[data-v-107e7c87] {
+  border-bottom: 1px solid red;
 }
-.myForm[data-v-44510d7e] {
-  width: 40%;
+.addShow[data-v-44510d7e] {
+  background: #fbfbfb;
+  text-align: center;
+  color: #000000;
+}
+.mySection[data-v-44510d7e] {
+  padding: 15px;
+}
+.mySection form[data-v-44510d7e] {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  border-radius: 10px;
+}
+.mySection .subscribers[data-v-44510d7e] {
+  overflow: scroll;
+  height: 480px;
 }
 *[data-v-44510d7e] {
   box-sizing: border-box;
@@ -79,16 +91,18 @@ label[data-v-44510d7e] {
   display: inline-block;
 }
 input[type=button][data-v-44510d7e] {
-  background-color: #4CAF50;
+  /*background-color: #4CAF50;*/
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   float: right;
+  background-image: linear-gradient(to right, #fda033, #b0487f);
 }
 input[type=button][data-v-44510d7e]:hover {
-  background-color: #45a049;
+  /*background-color: #45a049;*/
+  background-image: linear-gradient(to right, #b0487f, #fda033);
 }
 .container[data-v-44510d7e] {
   border-radius: 5px;
@@ -127,11 +141,18 @@ input[type=button][data-v-44510d7e]:hover {
   margin: auto;
   background: #0a0a0a;
   min-height: 500px;
-  padding: 100px 0px 0px 0px;
+  padding: 40px 0px 0px 0px;
   text-align: center;
 }
 .login h1[data-v-0b05af4a] {
   color: white;
+}
+.login button[data-v-0b05af4a] {
+  background-image: linear-gradient(to right, #fda033, #b0487f);
+  color: white;
+}
+.login button[data-v-0b05af4a] :hover {
+  background-image: linear-gradient(to right, #b0487f, #fda033);
 }
 body ul {
   background-color: #000000;
@@ -155,7 +176,7 @@ body .header {
   width: 100%;
   padding: 70px 0px 40px 0px;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.5)), url(https://www.google.com/url?sa=i&url=https%3A%2F%2Feditorial.rottentomatoes.com%2Fguide%2F200-essential-movies-to-watch-now%2F&psig=AOvVaw0nsgoay6V9f0DnC2UjFTvD&ust=1579424528257000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMin5ZbljOcCFQAAAAAdAAAAABAI);
-  background-size: cover;
+  background-size: contain;
   color: #f1f1f1;
   line-height: 0.8;
 }
