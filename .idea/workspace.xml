@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b78deb3c-2a0b-46f1-a731-455bf570b8f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shows/Shows.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shows/Shows.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +96,7 @@
       <workItem from="1579117589268" duration="10532000" />
       <workItem from="1579209680126" duration="59235000" />
       <workItem from="1579506433548" duration="65000" />
-      <workItem from="1579528543222" duration="2119000" />
+      <workItem from="1579528543222" duration="5578000" />
     </task>
     <servers />
   </component>
@@ -128,9 +132,9 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="298" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1579533427307" />
-    <state x="464" y="142" width="816" height="540" key="find.popup" timestamp="1579462369281">
+    <state x="464" y="142" width="816" height="540" key="find.popup" timestamp="1579552378856">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="464" y="142" width="816" height="540" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1579462369281" />
+    <state x="464" y="142" width="816" height="540" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1579552378856" />
   </component>
 </project>
