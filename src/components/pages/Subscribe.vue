@@ -4,11 +4,11 @@
         </h5>
         <h6> Enter Your email address below and click the subscribe button.</h6>
         <form class=" grid-x">
-            <label class="medium-10 small-10">
+            <label class="medium-10 small-12">
                 <input type="text" placeholder="Enter Your Email Address" v-on:keyup=""
                        v-model="form.email">
             </label>
-            <button type="button" class="primary button medium-2 small-2" v-on:click="subscribe">Subscribe <i class="fas fa-envelope"></i></button>
+            <button type="button" class="primary button medium-2 small-12" v-on:click="subscribe">Subscribe <i class="fas fa-envelope"></i></button>
         </form>
     </div>
 </template>

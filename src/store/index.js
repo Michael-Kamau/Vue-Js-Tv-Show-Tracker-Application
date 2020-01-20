@@ -43,7 +43,7 @@ export default new Vuex.Store({
         },
         retrieveToken(state,payload){
             return new Promise((resolve,reject)=>{
-                axios.post(`http://localhost:5000/api/login`, payload)
+                axios.post(`http://64.227.11.157/api/login`, payload)
                     .then(response => {
                         console.log(response.data)
                         const token=response.data.token
@@ -86,7 +86,7 @@ export default new Vuex.Store({
            }
         },
         subscribe(state,payload){
-            axios.post(`http://localhost:5000/subscribe`, payload)
+            axios.post(`http://64.227.11.157/subscribe`, payload)
                 .then(response => {
                     console.log(response.data)
                     //this.state.show=response.data.shows
@@ -100,7 +100,7 @@ export default new Vuex.Store({
     mutations: {
 
         getShowsData(state) {
-            axios.get('http://localhost:5000/shows')
+            axios.get('http://64.227.11.157/shows')
                 .then(response => {
                     state.show = response.data.shows
                 }).catch(e => {
@@ -108,7 +108,7 @@ export default new Vuex.Store({
             })
         },
         postShow(state,payload) {
-            axios.post(`http://localhost:5000/addShow`, payload)
+            axios.post(`http://64.227.11.157/addShow`, payload)
                 .then(response => {
                     console.log(response.data)
                     this.state.show=response.data.shows
@@ -118,7 +118,7 @@ export default new Vuex.Store({
                 })
         },
         deleteShow(state,payload) {
-            axios.post(`http://localhost:5000/delete`, payload)
+            axios.post(`http://64.227.11.157/delete`, payload)
                 .then(response => {
                     console.log(response.data)
                     this.state.show=response.data.shows
@@ -135,7 +135,7 @@ export default new Vuex.Store({
             state.token=null
         },
         login(state, payload) {
-            axios.post(`http://localhost:5000/login`, payload)
+            axios.post(`http://64.227.11.157/login`, payload)
                 .then(response => {
                     console.log(response.data)
                     this.state.show=response.data.shows

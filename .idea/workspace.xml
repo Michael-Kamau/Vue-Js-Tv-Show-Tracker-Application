@@ -3,15 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b78deb3c-2a0b-46f1-a731-455bf570b8f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/AddShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AddShow.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/AdminLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AdminLogin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shows/Shows.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shows/Shows.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/Users.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/subscribers/Subscribers.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/login.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sass/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Subscribe.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Subscribe.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +46,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
@@ -97,7 +92,9 @@
       <workItem from="1578737527034" duration="16731000" />
       <workItem from="1578977280951" duration="31102000" />
       <workItem from="1579117589268" duration="10532000" />
-      <workItem from="1579209680126" duration="57773000" />
+      <workItem from="1579209680126" duration="59235000" />
+      <workItem from="1579506433548" duration="65000" />
+      <workItem from="1579528543222" duration="1115000" />
     </task>
     <servers />
   </component>
@@ -129,10 +126,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="319" y="234" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579155868302" />
-    <state x="298" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578987997828">
+    <state x="298" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579533427307">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="298" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1578987997828" />
+    <state x="298" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1579533427307" />
     <state x="464" y="142" width="816" height="540" key="find.popup" timestamp="1579462369281">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
