@@ -44,7 +44,8 @@
 /*    padding: 50px;*/
 /*}*/
 .subscriber-container[data-v-107e7c87] {
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #69ff52;
+  margin-bottom: 20px;
 }
 .addShow[data-v-44510d7e] {
   background: #fbfbfb;
@@ -120,9 +121,6 @@ input[type=button][data-v-44510d7e]:hover {
     width: 100%;
     margin-top: 0;
 }
-}
-.main_container[data-v-44510d7e] {
-  display: flex;
 }
 .login[data-v-0b05af4a] {
   margin: auto;

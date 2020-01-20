@@ -164,22 +164,28 @@ app.get('/api', (req, res) => {
     });
 });
 
-app.post('/', (req, res) => {
-    transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-            console.log(error)
-        } else {
-            console.log('Email sent' + info.response)
-        }
-    })
-    res.json({
-        message: shows
-    });
-});
+// app.post('/', (req, res) => {
+//     transporter.sendMail(mailOptions, function (error, info) {
+//         if (error) {
+//             console.log(error)
+//         } else {
+//             console.log('Email sent' + info.response)
+//         }
+//     })
+//     res.json({
+//         message: shows
+//     });
+// });
 
 app.get('/shows', (req, res) => {
     res.json({
         shows
+    });
+});
+
+app.get('/subscribers', (req, res) => {
+    res.json({
+        subscribers
     });
 });
 
@@ -315,6 +321,43 @@ app.get('/unsubscribe',(req,res)=>{
         // );
         // res.end();
         res.redirect(301,'http://shows.appp');
+    }
+
+
+
+
+
+
+
+    console.log(subscribers)
+});
+
+app.post('/adminUnsubscribe',(req,res)=>{
+
+    console.log(req)
+    try {
+        console.log("To unsubscribe"+req.body.id)
+
+        for (let i=0; i<subscribers.length;i++) {
+            if(subscribers[i].id==req.body.id && subscribers[i].verString==req.body.verString){
+                subscribers = subscribers.filter(function (el) {
+                    return el.id != req.body.id;
+                });
+
+            }
+        }
+
+    }
+    catch (e) {
+        console.log("entering catch block");
+        console.log(e);
+        console.log("leaving catch block");
+    }
+    finally {
+        console.log('finally')
+        res.json({
+            subscribers
+        })
     }
 
 

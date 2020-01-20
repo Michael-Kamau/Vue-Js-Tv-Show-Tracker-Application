@@ -7,13 +7,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         show: [],
-        token:localStorage.getItem('access_token')||null,
-        authenticated:false,
-        showsNew: [],
-        showsAdd: [],
-        cart: [],
-        checkoutStatus: null,
-
+        token: localStorage.getItem('access_token') || null,
+        authenticated: false,
+        subscribers: [],
     },
 
     getters: {
@@ -21,8 +17,11 @@ export default new Vuex.Store({
             return state.show
         },
 
-        loggedIn(state){
-            return state.token!=null
+        loggedIn(state) {
+            return state.token != null
+        },
+        getSubscribers(state) {
+            return state.subscribers
         }
 
 
@@ -33,6 +32,19 @@ export default new Vuex.Store({
 
             state.commit('getShowsData')
         },
+        getAllSubscribers(state) {
+            axios.get(`http://localhost:5000/subscribers`)
+                .then(response => {
+                    console.log(response.data)
+                    const subscribers = response.data.subscribers
+                    state.commit('getAllSubscribers', subscribers)
+                    resolve(response)
+                }).catch(e => {
+                console.log(e)
+            })
+
+
+        },
         postShow({commit}, payload) {
             console.log("reached");
             commit('postShow', payload)
@@ -41,17 +53,17 @@ export default new Vuex.Store({
             console.log("delete reached action");
             commit('deleteShow', payload)
         },
-        retrieveToken(state,payload){
-            return new Promise((resolve,reject)=>{
+        retrieveToken(state, payload) {
+            return new Promise((resolve, reject) => {
                 axios.post(`http://localhost:5000/api/login`, payload)
                     .then(response => {
                         console.log(response.data)
-                        const token=response.data.token
-                        localStorage.setItem('access_token',token)
-                        state.commit('retrieveToken',token)
+                        const token = response.data.token
+                        localStorage.setItem('access_token', token)
+                        state.commit('retrieveToken', token)
                         resolve(response)
                     }).catch(e => {
-                        reject(e)
+                    reject(e)
 
                     //this.errors.push(e)
                     console.log(e)
@@ -61,31 +73,31 @@ export default new Vuex.Store({
 
         },
 
-        loggedIn(state){
-            return state.token!=null
+        loggedIn(state) {
+            return state.token != null
         },
-        destroyToken(state){
-           if(state.getters.loggedIn){
-               return new Promise((resolve,reject)=>{
-                   axios.post(`http://localhost:5000/api/logout`)
-                       .then(response => {
-                           localStorage.removeItem('access_token')
-                           state.commit('destroyToken')
-                           resolve(response)
-                       }).catch(e => {
-                       localStorage.removeItem('access_token')
-                       state.commit('destroyToken')
-                       reject(e)
+        destroyToken(state) {
+            if (state.getters.loggedIn) {
+                return new Promise((resolve, reject) => {
+                    axios.post(`http://localhost:5000/api/logout`)
+                        .then(response => {
+                            localStorage.removeItem('access_token')
+                            state.commit('destroyToken')
+                            resolve(response)
+                        }).catch(e => {
+                        localStorage.removeItem('access_token')
+                        state.commit('destroyToken')
+                        reject(e)
 
-                       //this.errors.push(e)
-                       console.log(e)
-                   })
-               })
+                        //this.errors.push(e)
+                        console.log(e)
+                    })
+                })
 
 
-           }
+            }
         },
-        subscribe(state,payload){
+        subscribe(state, payload) {
             axios.post(`http://localhost:5000/subscribe`, payload)
                 .then(response => {
                     console.log(response.data)
@@ -94,7 +106,20 @@ export default new Vuex.Store({
                 //this.errors.push(e)
                 console.log(e)
             })
-        }
+        },
+        adminUnsubscribe(state,payload) {
+            console.log(payload)
+            axios.post(`http://localhost:5000/adminUnsubscribe`,payload)
+                .then(response => {
+                    console.log(response.data)
+                    const subscribers = response.data.subscribers
+                    state.commit('adminUnsubscribe', subscribers)
+                }).catch(e => {
+                console.log(e)
+            })
+
+
+        },
     },
 
     mutations: {
@@ -107,43 +132,50 @@ export default new Vuex.Store({
                 console.log(e)
             })
         },
-        postShow(state,payload) {
+        getAllSubscribers(state,payload) {
+            state.subscribers=payload
+        },
+        postShow(state, payload) {
             axios.post(`http://localhost:5000/addShow`, payload)
                 .then(response => {
                     console.log(response.data)
-                    this.state.show=response.data.shows
+                    this.state.show = response.data.shows
                 }).catch(e => {
-                    //this.errors.push(e)
+                //this.errors.push(e)
                 console.log(e)
-                })
+            })
         },
-        deleteShow(state,payload) {
+        deleteShow(state, payload) {
             axios.post(`http://localhost:5000/delete`, payload)
                 .then(response => {
                     console.log(response.data)
-                    this.state.show=response.data.shows
+                    this.state.show = response.data.shows
                 }).catch(e => {
                 //this.errors.push(e)
                 console.log(e)
             })
         },
 
-        retrieveToken(state,payload){
-            state.token=payload
+        retrieveToken(state, payload) {
+            state.token = payload
         },
-        destroyToken(state){
-            state.token=null
+        destroyToken(state) {
+            state.token = null
         },
         login(state, payload) {
             axios.post(`http://localhost:5000/login`, payload)
                 .then(response => {
                     console.log(response.data)
-                    this.state.show=response.data.shows
+                    this.state.show = response.data.shows
                 }).catch(e => {
                 //this.errors.push(e)
                 console.log(e)
             })
         },
+        adminUnsubscribe(state, payload){
+            console.log(payload)
+            state.subscribers= payload
+        }
 
     }
 })

@@ -77,13 +77,9 @@
         </div>
         <div class="mySection small-12 medium-6 ">
             <h4>Users</h4>
-            <div class="subscribers">
-                <Subscribers/>
-                <Subscribers/>
-                <Subscribers/>
-                <Subscribers/>
-                <Subscribers/>
-                <Subscribers/>
+            <div class="subscribers" >
+                <Subscribers v-bind:subscriber="subscriber" v-for="subscriber in this.$store.getters.getSubscribers"></Subscribers>
+
             </div>
 
         </div>
@@ -113,6 +109,15 @@
                 }
 
             },
+        },
+        created() {
+            this.$store.dispatch('getAllSubscribers')
+        },
+
+        mounted() {
+            if(!this.$store.getters.loggedIn){
+                this.$router.push('/')
+            }
         }
     }
 </script>
@@ -208,8 +213,5 @@
     }
 
 
-    .main_container{
-        display: flex;
-    }
 
 </style>
