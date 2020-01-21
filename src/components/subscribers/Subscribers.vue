@@ -24,7 +24,12 @@
         props:['subscriber'],
         methods:{
             adminUnsubscribe(){
-                this.$store.dispatch('adminUnsubscribe',this.subscriber)
+
+                if (confirm("Do you really want to delete " + this.subscriber.email + " ?")) {
+
+                    this.$store.dispatch('adminUnsubscribe',this.subscriber)
+                }
+
             }
         }
     }

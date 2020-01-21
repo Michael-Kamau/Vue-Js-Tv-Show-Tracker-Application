@@ -25,6 +25,7 @@
 
             subscribe(){
                 this.$store.dispatch('subscribe',this.form)
+                this.form={}
             }
 
         }

@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "3766ec4623790da9114e";
+/******/ 	var hotCurrentHash = "7d0f4bb05de043718a72";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1223,7 +1223,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _All
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: \"Subscribe.vue\",\n  data: function data() {\n    return {\n      form: {}\n    };\n  },\n  methods: {\n    subscribe: function subscribe() {\n      this.$store.dispatch('subscribe', this.form);\n    }\n  }\n});\n\n//# sourceURL=webpack:///./src/components/pages/Subscribe.vue?./node_modules/babel-loader/lib??ref--1!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: \"Subscribe.vue\",\n  data: function data() {\n    return {\n      form: {}\n    };\n  },\n  methods: {\n    subscribe: function subscribe() {\n      this.$store.dispatch('subscribe', this.form);\n      this.form = {};\n    }\n  }\n});\n\n//# sourceURL=webpack:///./src/components/pages/Subscribe.vue?./node_modules/babel-loader/lib??ref--1!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -1259,7 +1259,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Sho
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: \"subscriber\",\n  props: ['subscriber'],\n  methods: {\n    adminUnsubscribe: function adminUnsubscribe() {\n      this.$store.dispatch('adminUnsubscribe', this.subscriber);\n    }\n  }\n});\n\n//# sourceURL=webpack:///./src/components/subscribers/Subscribers.vue?./node_modules/babel-loader/lib??ref--1!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: \"subscriber\",\n  props: ['subscriber'],\n  methods: {\n    adminUnsubscribe: function adminUnsubscribe() {\n      if (confirm(\"Do you really want to delete \" + this.subscriber.email + \" ?\")) {\n        this.$store.dispatch('adminUnsubscribe', this.subscriber);\n      }\n    }\n  }\n});\n\n//# sourceURL=webpack:///./src/components/subscribers/Subscribers.vue?./node_modules/babel-loader/lib??ref--1!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 

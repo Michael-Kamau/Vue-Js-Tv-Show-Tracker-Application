@@ -49,7 +49,7 @@ let shows = [
         'name': 'Trapped Model',
         'genre': 'Romance, Comedy',
         'cast': 'Winsley, Barbaric Heathen',
-        'rating': 6,
+        'rating': 4,
         'year': 2011,
         'image': 'http://boudoirsalon.com/images/models/3480997_8353371.jpg',
         'video': 'https://www.youtube.com/watch?v=RuUSTEePjY4'
