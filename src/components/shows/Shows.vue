@@ -7,7 +7,7 @@
             <h6>Cast by:&nbsp;<small>{{show.cast}}</small></h6>
             <h6>Genre:&nbsp; {{show.genre}}</h6>
             <h6>Year:&nbsp;{{show.year}}</h6>
-            <h6 class="rating">Rating:&nbsp;{{show.rating}}
+            <h6 class="rating">Rating:&nbsp;
                 <StarRating v-model="show.rating" :item-size="30"
                             inactive-color="#000"
                             active-color="#cc1166"></StarRating>
